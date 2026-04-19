@@ -1,0 +1,6 @@
+{
+  "framework": "nextjs",
+  "rootDirectory": "apps/docs",
+  "buildCommand": "pnpm install && pnpm --filter @braviadev/docs run build",
+  "ignoreCommand": "exit 0"
+}
