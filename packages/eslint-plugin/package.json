@@ -33,6 +33,7 @@
     "minimatch": "^10.2.4"
   },
   "devDependencies": {
+    "@braviadev/eslint-plugin": "workspace:*",
     "@braviadev/typescript-config": "workspace:*",
     "@types/node": "catalog:dev",
     "@typescript-eslint/rule-tester": "^8.57.2",
