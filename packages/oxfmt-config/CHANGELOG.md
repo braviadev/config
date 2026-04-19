@@ -1,0 +1,25 @@
+# @braviadev/oxfmt-config
+
+## 0.1.3
+
+### Patch Changes
+
+- 12f2523: Tighten the `oxfmt` peer dependency range to `^0.41.0`.
+
+## 0.1.2
+
+### Patch Changes
+
+- e74b458: Export the `OxfmtConfig` type from the package entrypoint.
+
+## 0.1.1
+
+### Patch Changes
+
+- f76d066: Switch local development tooling dependencies to the shared catalog versions.
+
+## 0.1.0
+
+### Minor Changes
+
+- 0c9f58f: Add `@braviadev/oxfmt-config` package replacing `@braviadev/prettier-config`. Provides an opinionated oxfmt configuration with single quotes, no semicolons, and 120 print width.

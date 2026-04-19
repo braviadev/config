@@ -1,0 +1,27 @@
+name: Continuous Release
+
+on:
+  pull_request:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
+  TURBO_TEAM: ${{ secrets.TURBO_TEAM }}
+
+jobs:
+  publish:
+    name: Publish
+    runs-on: ubuntu-latest
+    if: github.head_ref != 'changeset-release/main'
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@v4
+
+      - name: Configure environment
+        uses: ./.github/actions/setup
+
+      - name: Run Publish
+        run: pnpm dlx pkg-pr-new publish --pnpm --compact './packages/*'

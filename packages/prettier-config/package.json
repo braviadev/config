@@ -1,0 +1,42 @@
+{
+  "name": "@braviadev/prettier-config",
+  "version": "0.3.0",
+  "homepage": "https://github.com/braviadev/config/blob/main/packages/prettier-config/README.md",
+  "bugs": {
+    "url": "https://github.com/braviadev/config/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/braviadev/config.git",
+    "directory": "packages/prettier-config"
+  },
+  "license": "MIT",
+  "author": "Olanrewaju Toyyib <me@bravía.com> (https://github.com/braviadev/)",
+  "type": "module",
+  "exports": {
+    "types": "./dist/index.d.mts",
+    "import": "./dist/index.mjs"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsdown",
+    "clean": "rm -rf .turbo dist",
+    "dev": "tsdown --watch",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@braviadev/typescript-config": "workspace:*",
+    "@types/node": "^24.11.0",
+    "prettier": "^3.8.1",
+    "tsdown": "catalog:dev"
+  },
+  "peerDependencies": {
+    "prettier": "^3.0.0",
+    "prettier-plugin-packagejson": "^2.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

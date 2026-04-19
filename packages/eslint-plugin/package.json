@@ -1,0 +1,54 @@
+{
+  "name": "@braviadev/eslint-plugin",
+  "version": "0.2.4",
+  "homepage": "https://github.com/braviadev/config/blob/main/packages/eslint-plugin/README.md",
+  "bugs": {
+    "url": "https://github.com/braviadev/config/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/braviadev/config.git",
+    "directory": "packages/eslint-plugin"
+  },
+  "license": "MIT",
+  "author": "Olanrewaju Toyyib <me@bravía.com> (https://github.com/braviadev/)",
+  "type": "module",
+  "exports": {
+    "types": "./dist/index.d.mts",
+    "import": "./dist/index.mjs"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsdown",
+    "clean": "rm -rf .turbo dist",
+    "dev": "tsdown --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@typescript-eslint/utils": "^8.57.2",
+    "minimatch": "^10.2.4"
+  },
+  "devDependencies": {
+    "@braviadev/typescript-config": "workspace:*",
+    "@types/node": "catalog:dev",
+    "@typescript-eslint/rule-tester": "^8.57.2",
+    "eslint": "catalog:dev",
+    "tsdown": "catalog:dev",
+    "vitest": "catalog:dev"
+  },
+  "peerDependencies": {
+    "eslint": "^9.0.0 || ^10.0.0"
+  },
+  "peerDependenciesMeta": {
+    "eslint": {
+      "optional": true
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

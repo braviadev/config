@@ -1,0 +1,25 @@
+{
+  "name": "@braviadev/typescript-config",
+  "version": "1.2.1",
+  "homepage": "https://github.com/braviadev/config/blob/main/packages/typescript-config/README.md",
+  "bugs": {
+    "url": "https://github.com/braviadev/config/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/braviadev/config.git",
+    "directory": "packages/typescript-config"
+  },
+  "license": "MIT",
+  "author": "Olanrewaju Toyyib <me@bravía.com> (https://github.com/braviadev/)",
+  "files": [
+    "./base.json",
+    "./library.json",
+    "./nextjs.json",
+    "./react-library.json",
+    "./tanstack-start.json"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}
