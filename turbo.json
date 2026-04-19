@@ -5,16 +5,23 @@
     "build": {
       "dependsOn": ["^build"],
       "inputs": ["$TURBO_DEFAULT$"],
-      "outputs": ["dist/**"]
-    },
-    "test": {},
-    "typecheck": {},
-    "clean": {
-      "cache": false
+      "outputs": ["dist/**", ".next/**"]
     },
     "dev": {
       "cache": false,
       "persistent": true
+    },
+    "lint": {
+      "inputs": ["$TURBO_DEFAULT$"]
+    },
+    "typecheck": {
+      "inputs": ["$TURBO_DEFAULT$"]
+    },
+    "test": {
+      "inputs": ["$TURBO_DEFAULT$"]
+    },
+    "clean": {
+      "cache": false
     }
   }
 }
