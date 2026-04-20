@@ -1,7 +1,10 @@
 import { defineConfig, globalIgnores } from "eslint/config";
 import nextVitals from "eslint-config-next/core-web-vitals";
 import nextTs from "eslint-config-next/typescript";
-import braviadev from "@braviadev/eslint-config";
+import braviadevPkg from "@braviadev/eslint-config";
+
+// Interop: Grab the default export whether it's native ESM or compiled CommonJS
+const braviadev = braviadevPkg.default || braviadevPkg;
 
 export default defineConfig([
   ...braviadev,   // ✅ your own config first
